@@ -32,6 +32,7 @@ jobs:
         # shown in the logs
       - name: Check out repository code
         # the "uses" keyword shows an action
+        # the files under .github/workflows are not copied
         uses: actions/checkout@v2  
       
       - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
@@ -51,7 +52,7 @@ jobs:
       
       - name: Setup dotnet on runner
         uses: actions/setup-dotnet@v1
-        # passes paramaters to an action
+        # passes parameters to an action
         with:
           dotnet-version: '3.x'
       
